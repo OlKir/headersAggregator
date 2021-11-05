@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		49A0E89927356D4500D25751 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0E89827356D4500D25751 /* main.swift */; };
+		49A0E8A027356E7F00D25751 /* LocalizationsScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0E89F27356E7F00D25751 /* LocalizationsScanner.swift */; };
+		49A0E8A2273574A200D25751 /* FileManager+Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0E8A1273574A200D25751 /* FileManager+Directory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		49A0E89527356D4500D25751 /* localizationsCommentsChecker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = localizationsCommentsChecker; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A0E89827356D4500D25751 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		49A0E89F27356E7F00D25751 /* LocalizationsScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationsScanner.swift; sourceTree = "<group>"; };
+		49A0E8A1273574A200D25751 /* FileManager+Directory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Directory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				49A0E89827356D4500D25751 /* main.swift */,
+				49A0E89F27356E7F00D25751 /* LocalizationsScanner.swift */,
+				49A0E8A1273574A200D25751 /* FileManager+Directory.swift */,
 			);
 			path = localizationsCommentsChecker;
 			sourceTree = "<group>";
@@ -121,6 +127,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				49A0E89927356D4500D25751 /* main.swift in Sources */,
+				49A0E8A027356E7F00D25751 /* LocalizationsScanner.swift in Sources */,
+				49A0E8A2273574A200D25751 /* FileManager+Directory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
