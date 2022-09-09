@@ -8,16 +8,25 @@
 import Foundation
 
 var inputPath: String?
+var outputPath: String?
+var umbrellaHeaderName: String = "umbrella_header.h"
 
 for i in 0..<CommandLine.arguments.count {
   if i == 1 {
     inputPath = CommandLine.arguments[i]
   }
+  if i == 2 {
+    outputPath = CommandLine.arguments[i]
+  }
+  if i == 3 {
+    umbrellaHeaderName = CommandLine.arguments[i]
+  }
 }
 
 guard
   CommandLine.arguments.count > 0,
-  let scanPath = inputPath
+  let scanPath = inputPath,
+  let outPath = outputPath
 else {
   print("   ERROR: provide folder path for recursive scan")
   exit(1)
@@ -31,11 +40,14 @@ if fileManager.fileExists(atPath: scanPath, isDirectory: &isDirectory) {
     exit(1)
   }
   let startTime = Date()
-  print("Scan localization comments in interface files started...")
+  print("Aggregation of headers files started...")
 
-  LocalizationsScanner.scanFolder(scanPath)
+  let headerScanner = HeadersScanner(with: outPath)
+  headerScanner.scanFolder(scanPath)
+  
+  HeaderCombiner.combine(in: outPath, file: umbrellaHeaderName)
 
-  print("Scan localization comments finished in \(Date().timeIntervalSince(startTime)) seconds.")
+  print("Aggregation of headers files finished in \(Date().timeIntervalSince(startTime)) seconds.")
 } else {
   print("   ERROR: please provide a valid path to folder")
   exit(1)

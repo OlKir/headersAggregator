@@ -1,6 +1,6 @@
 //
 //  FileManager+Directory.swift
-//  localizationsCommentsChecker
+//  headersAggregator
 //
 //  Created by Oleksii on 05.11.21.
 //
